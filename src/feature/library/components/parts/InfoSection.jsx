@@ -1,9 +1,13 @@
+import {useState} from "react";
+
 import user from '../../../../assets/icons/user.svg'
 import category from '../../../../assets/icons/category.svg'
-import cart from '../../../../assets/icons/cart-empty.svg'
+import cartEmpty from '../../../../assets/icons/cart-empty.svg'
+import cart from '../../../../assets/icons/cart.svg'
 import heart from '../../../../assets/icons/heart.svg'
 import {IconAndText} from "../../../../common/IconAndText.jsx";
 import Divider from "./Divider.jsx";
+import './InfoSection.css'
 
 
 function ConvertPrice(price) {
@@ -16,6 +20,10 @@ export default function InfoSection({book}) {
     // if (!beforeDiscount){beforeDiscount=undefined;}
     let afterDiscount = `${ConvertPrice(book.price)} uzs}`
 
+    // let isAdded=useState(false);//state va stateni ozgartiradigan narsa yani setState
+    let [isAdded, setIsAdded] = useState(false)
+
+
     return (
         <div className='info-section'>
             <h3>{book.title}</h3>
@@ -23,7 +31,7 @@ export default function InfoSection({book}) {
                 {book.hasDiscount ? beforeDiscount : undefined}
                 <span className={'after-discount'}>{book.price === 0 ? 'Bepul' : afterDiscount}</span>
             </div>
-            <div className={'middle'}>
+            <div className={'middle'} >
                 <IconAndText icon={book.difficultyIcon}>{book.difficulty}</IconAndText>
                 <Divider/>
                 <IconAndText icon={category}>{book.category}</IconAndText>
@@ -31,8 +39,8 @@ export default function InfoSection({book}) {
                 <IconAndText icon={user}>{book.author}</IconAndText>
             </div>
             <div className='bottom'>
-                <button>
-                    <img src={cart} alt={'Empty'}/>
+                <button onClick={() => setIsAdded(!isAdded)} className={isAdded?'active':''}>
+                    <img src={isAdded ? cart : cartEmpty} alt={'Empty'}/>
                     <span> Savatcha</span>
                 </button>
                 <img src={heart} alt={'savatcha'}/>

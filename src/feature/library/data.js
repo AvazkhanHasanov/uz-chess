@@ -7,6 +7,10 @@ import book3 from "/src/assets/images/book3.png"
 import book4 from "/src/assets/images/book4.png"
 import book5 from "/src/assets/images/book5.png"
 
+import img1 from "/src/assets/images/img1.png"
+import img2 from "/src/assets/images/img2.png"
+import img3 from "/src/assets/images/img3.png"
+import img4 from "/src/assets/images/img4.png"
 
 export const books = [
     {
@@ -84,5 +88,72 @@ export const books = [
         rating: 3.5,
         language: "O‘z"
     }
+
+]
+export const course = [
+    {
+        id: 1,
+        title: "Shaxmat donalari bilan tanishuv",
+        image: img1,
+        price: 96000,
+        hasDiscount: true,
+        priceBeforeDiscount: 205000,
+        author: "Robert Fisher",
+        category: "Strategiya",
+        difficulty: "Boshlang`ich",
+        numberOfLesson: 5,
+        difficultyIcon: difficulty1,
+        isLiked: true,
+        rating: 3.5,
+        language: 'PY'
+    },
+    {
+        id: 1,
+        title: "Shoxga hujum qilish",
+        image: img2,
+        price: 96000,
+        hasDiscount: true,
+        priceBeforeDiscount: null,
+        author: "Andre Konfutsiy",
+        category: "Hujum qilish",
+        difficulty: "Boshlang`ich",
+        numberOfLesson: 8,
+        difficultyIcon: difficulty1,
+        isLiked: false,
+        rating: 5.0,
+        language: 'O‘z'
+    },
+    {
+        id: 1,
+        title: "Mot qilish",
+        image: img3,
+        price: 107000,
+        hasDiscount: true,
+        priceBeforeDiscount: 160000,
+        author: "David Harikon",
+        category: "Himoyalanish",
+        difficulty: "Professional",
+        numberOfLesson: 4.5,
+        difficultyIcon: difficulty3,
+        isLiked: true,
+        rating: 3.5,
+        language: 'PY'
+    },
+    {
+        id: 1,
+        title: "Shaxmat donalari bilan tanishuv",
+        image: img4,
+        price: 96000,
+        hasDiscount: true,
+        priceBeforeDiscount: 205000,
+        author: "Asosiy taktikalar",
+        category: "Qoidalar",
+        difficulty: "Havaskor",
+        numberOfLesson: 7,
+        difficultyIcon: difficulty2,
+        isLiked: true,
+        rating: 5.0,
+        language: 'PY'
+    },
 
 ]

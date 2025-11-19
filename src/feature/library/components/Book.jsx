@@ -1,16 +1,14 @@
-
-
 import './Book.css'
 
-import ImageSection from "./parts/ImageSection.jsx";
+import ImageSection from "../../../common/ImageSection.jsx";
 import InfoSection from "./parts/InfoSection.jsx";
 
 
 export default function Book({book}) {
     return (
         <div className='book-item'>
-           <ImageSection book={book} />
-            <InfoSection book={book} />
+            <ImageSection data={book}/>
+            <InfoSection book={book}/>
         </div>
     )
 }

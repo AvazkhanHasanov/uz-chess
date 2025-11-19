@@ -1,0 +1,72 @@
+
+.info-section {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.info-section h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 9px;
+
+}
+
+.price-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 11px;
+}
+
+.before-discount {
+    font-size: 11px;
+    color: var(--secondary-low);
+    text-decoration: line-through;
+    text-decoration-color: rgba(220, 45, 45, 0.8);
+}
+
+.after-discount {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--green);
+}
+
+.middle{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.bottom{
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.bottom button{
+    background-color: #FFFFFF1A;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 10px 34px;
+    font-size: 16px;
+    font-weight: 500;
+    gap: 10px;
+    border: none;
+    outline: none;
+    color: white;
+
+
+    /*&:hover{cursor: pointer;}*/
+
+    &:active{
+        transform: scale(95%);
+        background-color: var(--blue);
+    }
+
+}
+.bottom button.active{
+    transform: scale(95%);
+    background-color: var(--blue);
+}

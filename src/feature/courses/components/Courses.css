@@ -1,0 +1,9 @@
+.course-info p{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--secondary-low);
+    margin: 0 0 16px 0;
+}
+.course-info h3{
+    margin: 0;
+}
