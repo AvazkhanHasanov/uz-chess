@@ -1,0 +1,7 @@
+.icon-and-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    color: var(--secondary-low);
+}
